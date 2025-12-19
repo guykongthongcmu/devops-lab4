@@ -1,0 +1,55 @@
+name: Feature Request
+description: Suggest a new feature or improvement.
+title: "[Feature]: "
+labels: ["enhancement", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this feature request!
+
+  - type: input
+    id: name
+    attributes:
+      label: Contact Details
+      description: What is your name?
+      placeholder: ex. Sertha Taweewattana
+    validations:
+      required: false
+
+  - type: dropdown
+    id: request_type
+    attributes:
+      label: Type of request?
+      description: Select the type of your request
+      options:
+        - New Feature
+        - Improvement
+        - Other
+      default: 0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: What is the OS which you want to suggest?
+      options:
+        - Windows
+        - macOS
+        - Linux
+        - iOS
+        - Android
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: What are the details of your suggestion?
+      description: Explain what do you want
+      placeholder: Feature details!
+      value: "Feature details!"
+    validations:
+      required: true
